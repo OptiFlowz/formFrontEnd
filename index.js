@@ -8,6 +8,8 @@ const socket = io('https://uehs-form-demo.fly.dev', {
 socket.on('connect', () => {
     console.log("Socket id:", socket.id);
     document.getElementById("userId").value = socket.id;
+    // document.getElementById("loader").classList.add("hiding");
+    // window.scrollTo(0, document.body.scrollHeight);
 });
 
 socket.on("uplatnica", (data) => {
@@ -19,4 +21,5 @@ socket.on("uplatnica", (data) => {
     document.getElementById("bigQr").src=data.ipsQrLink;
     document.getElementById("smolQr").src=data.ipsQrLink;
 
+    // document.getElementById("loader").classList.add("hiding");
 });
