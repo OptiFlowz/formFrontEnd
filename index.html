@@ -3,87 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <title>Forma za registraciju</title>
+  <title>UEHS - Test forma za registraciju</title>
   <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    .checkbox-group label {
-      display: block;
-      font-weight: normal;
-      margin-left: 5px;
-    }
-
-    .checkbox-group input[type="checkbox"] {
-      margin-right: 8px;
-    }
-
-    .submit-button {
-      margin-top: 25px;
-      padding: 12px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .submit-button:hover {
-      background-color: #45a049;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
+    <img class="logo" src="logo.webp" alt="Logo">
     <h2>Registraciona forma</h2>
 
     <iframe name="hiddenFrame" style="display:none;" id="hiddenFrame"></iframe>
     <form method="post" action="http://localhost:3001/send" id="myForm" target="hiddenFrame">
       <!-- Licni podaci -->
-      <label for="prezime">Prezime</label>
-      <input type="text" id="prezime" name="prezime">
+
+      <label for="ime">Ime</label>
+      <input type="text" id="ime" name="ime">
 
       <label for="srednje_slovo">Srednje slovo</label>
       <input type="text" id="srednje_slovo" name="srednje_slovo">
 
-      <label for="ime">Ime</label>
-      <input type="text" id="ime" name="ime">
+      <label for="prezime">Prezime</label>
+      <input type="text" id="prezime" name="prezime">
 
       <label for="drzava">Država</label>
       <input type="text" id="drzava" name="drzava">
