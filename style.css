@@ -1,0 +1,338 @@
+/* opsta uplatnica */
+.opstaUplatnica {
+    width: 652px;
+    height: 300px;
+    /*background-image : url('../../resources/images/css/opstaUplatnica.png');
+    background-repeat: no-repeat;*/
+    position: relative;
+    font-size: x-small;
+    text-align: left;
+    border: 1px solid black;
+    background-color: white;
+  }
+  .opstaUplatnicaText {
+    padding: 0 0 0 5px;
+  }
+  
+  .opstaUplatnica .gornji {
+    width: 100%;
+    height: 217px;
+    position: relative;
+  }
+  /* LEVI DEO UPLATNICE */
+  .opstaUplatnica .gornji .levi {
+    width: 326px;
+    height: 217px;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .levi .uplatilac {
+    width: 326px;
+    height: 78px;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .levi .uplatilac .uplatilacLabela {
+    position: absolute;
+    margin: 11px 0 0 5px;
+  }
+  .opstaUplatnica .gornji .levi .uplatilac .uplatilacBox {
+    position: absolute;
+    width: 286px;
+    height: 46px;
+    border: 1px solid black;
+    margin: 29px 0 0 5px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  
+  .opstaUplatnica .gornji .levi .svrhaUplate {
+    width: 326px;
+    height: 66px;
+    position: absolute;
+    margin-top: 78px;
+  }
+  .opstaUplatnica .gornji .levi .svrhaUplate .svrhaUplateLabela {
+    position: absolute;
+    margin: -1px 0 0 5px;
+  }
+  .opstaUplatnica .gornji .levi .svrhaUplate .svrhaUplateBox {
+    position: absolute;
+    width: 286px;
+    height: 46px;
+    border: 1px solid black;
+    margin: 17px 0 0 5px;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .levi .primalac {
+    width: 326px;
+    height: 72px;
+    position: absolute;
+    margin-top: 144px;
+  }
+  .opstaUplatnica .gornji .levi .primalac .primalacLabela {
+    position: absolute;
+    margin: -2px 0 0 5px;
+  }
+  .opstaUplatnica .gornji .levi .primalac .primalacBox {
+    position: absolute;
+    width: 286px;
+    height: 46px;
+    border: 1px solid black;
+    margin: 17px 0 0 5px;
+  }
+   
+  /*DESNI DEO UPLATNICE */ 
+  .opstaUplatnica .gornji .desni {
+    width: 323px;
+    height: 217px;
+    position: absolute;
+    left: 328px;
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela {
+    width: 68px;
+    height: 100%;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .sifraPlacanja {
+    width: 100%;
+    height: 88px;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .sifraPlacanja .sifraPlacanjaLabela {
+    line-height: 12px;
+    margin: 11px 0 0 17px;
+    position: absolute;
+    
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .sifraPlacanja .sifraPlacanjaBox {
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    margin: 39px 0 0 16px;
+    border: 1px solid black;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .brojModela {
+    width: 100%;
+    height: 128px;
+    position: absolute;
+    margin-top: 88px;
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .brojModela .brojModelaLabela{
+    line-height: 12px;
+    margin: 6px 0 0 17px;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .desni .sifraPlacanjaBrojModela .brojModela .brojModelaBox {
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    margin: 34px 0 0 16px;
+    border: 1px solid black;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .desni .ziroRacun {
+    width: 252px;
+    height: 100%;
+    position: absolute;
+    margin-left: 70px;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos {
+    width: 100%;
+    height: 42px;
+    position: absolute;
+    margin: 19px 0 0 0;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .valuta {
+    width: 65px;
+    height: 100%;
+    position: absolute;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .valuta .valutaLabela {
+    width: 41px;
+    height: 13px;
+    position: absolute;
+    margin: 4px 0 0 5px;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .valuta .valutaBox {
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    margin: 20px 0 0 7px;
+    border: 1px solid black;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .iznos {
+    width: 186px;
+    height: 100%;
+    position: absolute;
+    margin: 0 0 0 66px;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .iznos .iznosLabela {
+    width: 41px;
+    height: 13px;
+    position: absolute;
+    margin: 4px 0 0 3px;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .valutaIznos .iznos .iznosBox {
+    width: 159px;
+    height: 18px;
+    position: absolute;
+    border: 1px solid black;
+    margin: 20px 0 0 6px;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .desni .ziroRacun .racunPrimaoca {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    margin: 60px 0 0 0;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .racunPrimaoca .racunPrimaocaLabela {
+    height: 16px;
+    position: absolute;
+    margin: 2px 0 0 5px;
+    
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .racunPrimaoca .racunPrimaocaBox {
+    width: 224px;
+    height: 18px;
+    position: absolute;
+    border: 1px solid black;
+    margin: 21px 0 0 7px;
+    font-size: 12px;
+  }
+  
+  .opstaUplatnica .gornji .desni .ziroRacun .pozivNaBroj {
+    width: 100%;
+    height: 42px;
+    position: absolute;
+    margin: 100px 0 0 0;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .pozivNaBroj .pozivNaBrojLabela {
+    height: 15px;
+    position: absolute;
+    margin: 5px 0 0 5px;
+  }
+  .opstaUplatnica .gornji .desni .ziroRacun .pozivNaBroj .pozivNaBrojBox {
+    width: 224px;
+    height: 18px;
+    position: absolute;
+    border: 1px solid black;
+    margin: 22px 0 0 7px;
+    font-size: 12px;
+  }
+  
+  /* DONJI DEO UPLATNICE */
+  .opstaUplatnica .donji {
+    width: 100%;
+    height: 82px;
+    position: relative;
+  }
+  .opstaUplatnica .donji .pecat {
+    width: 172px;
+    height: 16px;
+    position: absolute;
+    margin: 18px 0 0 5px;
+    border-top: 1px solid black;
+    line-height: 13px;
+  }
+  
+  .opstaUplatnica .donji .ostalo {
+    width: 326px;
+    height: 20px;
+    position: absolute;
+    margin: 41px 0 0 134px;
+  }
+  .opstaUplatnica .donji .ostalo .mesto {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    margin: 4px 0 0 5px;
+    border-top: 1px solid black;
+    line-height: 14px;
+  }
+  .opstaUplatnica .donji .ostalo .datum {
+    width: 115px;
+    height: 100%;
+    position: absolute;
+    margin: 4px 0 0 210px;
+    border-top: 1px solid black;
+    line-height: 14px;
+  }
+  
+  /* stari css */
+  
+  .kol1 { 
+    position: absolute;
+    width: 50%;
+    max-width: 283px;
+    margin: 31px 0 0 8px;
+    padding-left: 2px;
+    float: left;
+  }
+  .kol1 .uplatilac {
+    position: absolute;
+    font-size: x-small;
+  }
+  
+  .kol1 .svrha {
+    position: absolute;
+    padding-top: 68px;
+  }
+  
+  .kol1 .primalac {
+    position: absolute;
+    padding-top: 137px;
+    font-size: x-small;
+    width: 285px;
+    line-height: 14px;
+  }
+  
+  .kol2 { 
+    position: absolute;
+    width: 50%;
+    margin: 0 0 0 348px;
+  }
+  .kol2 .row1 { 
+    padding-top: 39px;
+  }
+  
+  .row1 .sifraPlacanja {
+    
+  }
+  .row1 .valuta { 
+    margin-top: -18px;
+    padding-left: 62px;
+  }
+  .row1 .iznos {
+    margin-top: -18px;
+    padding-left: 125px;
+  }
+  
+  .kol2 .row2 { 
+    margin-top: 24px;
+  }
+  .row2 .racun {
+    padding-left: 62px;
+  }
+  
+  .kol2 .row3 { 
+    margin-top: 24px;
+  }
+  
+  .row3 .brojModela {
+  }
+  .row3 .poziv {
+    margin-top: -18px;
+    padding-left: 62px;
+  }
+  /* opsta uplatnica */
+
+  .displayNone{
+    display: none !important;
+  }

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Forma za registraciju</title>
+  <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .checkbox-group label {
+      display: block;
+      font-weight: normal;
+      margin-left: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .submit-button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registraciona forma</h2>
+
+    <iframe name="hiddenFrame" style="display:none;" id="hiddenFrame"></iframe>
+    <form method="post" action="http://localhost:3001/send" id="myForm" target="hiddenFrame">
+      <!-- Licni podaci -->
+      <label for="prezime">Prezime</label>
+      <input type="text" id="prezime" name="prezime">
+
+      <label for="srednje_slovo">Srednje slovo</label>
+      <input type="text" id="srednje_slovo" name="srednje_slovo">
+
+      <label for="ime">Ime</label>
+      <input type="text" id="ime" name="ime">
+
+      <label for="drzava">Država</label>
+      <input type="text" id="drzava" name="drzava">
+
+      <label for="grad">Grad</label>
+      <input type="text" id="grad" name="grad">
+
+      <label for="adresa">Adresa</label>
+      <input type="text" id="adresa" name="adresa">
+
+      <label for="pol">Pol</label>
+      <select id="pol" name="pol">
+        <option value="Muški">Muški</option>
+        <option value="Ženski">Ženski</option>
+      </select>
+
+      <label for="titula">Titula</label>
+      <select id="titula" name="titula">
+        <option value="Prof">Prof</option>
+        <option value="Doc">Doc</option>
+        <option value="Ass">Ass</option>
+        <option value="Prim">Prim</option>
+        <option value="Dr specijalista">Dr specijalista</option>
+        <option value="Dr na specijalizaciji">Dr na specijalizaciji</option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Ms">Ms</option>
+      </select>
+
+      <label for="broj_licence">Broj licence</label>
+      <input type="text" id="broj_licence" name="broj_licence">
+
+      <label for="ustanova">Ustanova/Institut</label>
+      <input type="text" id="ustanova" name="ustanova">
+
+      <!-- Kontakt -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="telefon">Broj telefona</label>
+      <input type="tel" id="telefon" name="telefon">
+
+      <label>Oblast prakse MIH:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska hirurgija gornjeg GIT"> Laparoskopska hirurgija gornjeg GIT</label>
+        <label><input type="checkbox" name="oblast[]" value="Barijatrija"> Barijatrija</label>
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska kolorektalna hirurgija"> Laparoskopska kolorektalna hirurgija</label>
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska HPB hirurgija"> Laparoskopska HPB hirurgija</label>
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska urgentna hirurgija"> Laparoskopska urgentna hirurgija</label>
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska hirurgija kila"> Laparoskopska hirurgija kila</label>
+        <label><input type="checkbox" name="oblast[]" value="Laparoskopska endokrina hirurgija"> Laparoskopska endokrina hirurgija</label>
+        <label><input type="checkbox" name="oblast[]" value="Drugo"> Drugo</label>
+      </div>
+
+      <label for="komentar">Komentar</label>
+      <textarea id="komentar" name="komentar" rows="4"></textarea>
+
+      <button type="submit" class="submit-button">Pošalji</button>
+
+      <input type="hidden" name="userId" id="userId" value=""/>
+    </form>
+  </div>
+
+
+  <div style="display: flex; justify-content: center; align-items: center;width: 100%; margin-top: 50px;">
+    <div id="uplatnica" class="opstaUplatnica displayNone">
+      <div class="gornji">
+        <div class="levi">
+          <div class="uplatilac">
+            <div class="uplatilacLabela">уплатилац</div>
+            <div class="uplatilacBox">
+              <span class="opstaUplatnicaText" id="imePrezime"></span>
+              <br>
+              <span class="opstaUplatnicaText" id="adresaPlatilac"></span>
+            </div>
+          </div>
+          <div class="svrhaUplate">
+            <div class="svrhaUplateLabela">сврха уплате</div>
+            <div class="svrhaUplateBox"><span class="opstaUplatnicaText" id="svrhaUplate">Članarina za 2025. godinu</span>
+            </div>
+          </div>
+          <div class="primalac">
+            <div class="primalacLabela">прималац</div>
+            <div class="primalacBox">
+              <span class="opstaUplatnicaText" id="primalac">Udruženje endoskopskih hirurga Srbije</span>
+              <br>
+              <span class="opstaUplatnicaText" id="primalacAdresa">Višegradska 26, 11000 Beograd</span>
+            </div>
+          </div>
+        </div>
+        <div class="desni">
+          <div class="sifraPlacanjaBrojModela">
+            <div class="sifraPlacanja">
+              <div class="sifraPlacanjaLabela">шифра плаћања</div>
+              <div class="sifraPlacanjaBox"><span class="opstaUplatnicaText">289</span>
+              </div>
+            </div>
+            <div class="brojModela">
+              <div class="brojModelaLabela">број модела</div>
+              <div class="brojModelaBox"><span class="opstaUplatnicaText"></span>
+              </div>
+            </div>
+          </div>
+          <div class="ziroRacun">
+            <div class="valutaIznos">
+              <div class="valuta">
+                <div class="valutaLabela">валута</div>
+                <div class="valutaBox"><span class="opstaUplatnicaText">РСД</span>
+                </div>
+              </div>
+              <div class="iznos">
+                <div class="iznosLabela">износ</div>
+                <div class="iznosBox">
+                  <span class="opstaUplatnicaText">12.000,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="racunPrimaoca">
+              <div class="racunPrimaocaLabela">рачун примаоца</div>
+              <div class="racunPrimaocaBox"><span class="opstaUplatnicaText">160-0000000453027-62</span>
+              </div>
+            </div>
+            <div class="pozivNaBroj">
+              <div class="pozivNaBrojLabela">позив на број (одобрење)</div>
+              <div class="pozivNaBrojBox"><span class="opstaUplatnicaText" id="pozivNaBroj"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="donji">
+        <div class="pecat">печат и потпис уплатиоца</div>
+        <div class="ostalo">
+          <div class="mesto">место и датум пријема</div>
+          <div class="datum">датум валуте</div>
+          <p style="position: absolute; margin: 21px 0 0 146px; font-size: smaller;">Образац
+            бр. 1</p>
+        </div>
+      </div>
+      <p style="FONT-SIZE: 18px; POSITION: relative; FLOAT: right; MARGIN-TOP: -297px; MARGIN-RIGHT: 10px;">НАЛОГ
+        ЗА УПЛАТУ</p>
+      <p style="border-left: 1px solid black; height: 181px; margin: -272px 0 0 315px; position: absolute; width: 1px;"></p>
+      <img id="smolQr" src="" style="position: absolute; margin: -150px 0px 0px 500px; width: 100px; height: 100px;" width="100">
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center;width: 100%; margin-top: 50px;">
+    <img id="bigQr" src=""></div>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
