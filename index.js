@@ -19,13 +19,4 @@ socket.on("uplatnica", (data) => {
     document.getElementById("bigQr").src=data.ipsQrLink;
     document.getElementById("smolQr").src=data.ipsQrLink;
 
-    qrCode(ipsString);
 });
-/*
-function qrCode(ipsString){
-    var srcBig = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${ipsString}`;
-    var srcSmol = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${ipsString}`;
-    document.getElementById("uplatnica").classList.remove('displayNone');
-    document.getElementById("bigQr").src=srcBig;
-    document.getElementById("smolQr").src=srcSmol;
-}*/
